@@ -1,0 +1,192 @@
+/* --------------- reset.css --------------- */
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, em, img, strong, sub, sup, b, u, i,  dl, dt, dd, ol, ul, li, fieldset, form, label, table, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;                               /* обнуляем отступы и убираем бордюры */
+	vertical-align: baseline;          /* приводим все к одной базовой линии */
+	background: transparent;      /* чтобы не проскакивали левые фоны, установленные по умолчанию */
+	font-size: 100%;                     /* размер шрифта всем одинаковый */
+}
+	a {                                      	     /* ссылка не в общем списке чтобы не сбрасывать outline по умолчанию */
+		margin:0;
+		padding:0;
+		font-size:100%;
+		vertical-align:baseline;
+		background:transparent;
+		outline:none;
+	}
+	table {						/* устраняем отступы между ячейками таблицы */
+		border-collapse: collapse;
+		border-spacing: 0;
+	}
+	td, td img {
+		vertical-align: top;			/* возвращаем привычное вертикальное выравнивание */
+	}
+	input, select, button, textarea {
+		margin: 0; 				/* убираем отступы по умолчанию для элементов форм (в частности для checkbox и radio) */
+		font-size: 100%; 			/* делаем размер шрифтов везде одинаковым */
+		outline: none;
+	}
+	input[type="text"], input[type="password"], textarea {
+		padding: 0; 				/* убираем внутренние отступы для текстовых полей */
+	}
+	input[type="checkbox"] { 		/* вертикальное выравнивание чекбоксов и радиобатонов относительно меток */
+		vertical-align: bottom;
+	}
+	input[type="radio"] {
+		vertical-align: text-bottom;
+	}
+	sub {
+		vertical-align: sub;
+		font-size: smaller;
+	}
+	sup {
+		vertical-align: super;
+		font-size: smaller;
+	}
+	article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+		display:block;
+	}
+	ul {
+		 list-style:none;
+	}
+/* --------------- базовые настройки ---------*/
+html {
+	min-height:100%; /* всегда показываем вертикальную полосу прокрутки  */
+}
+	body {
+		color: #424c43;
+		background: #fff;
+		text-align: left;
+		font-size: 1em; /* используем безопасные шрифтовые CSS стеки */
+		min-height: 100%;
+		background-image: url(../img/bg.jpg);
+		background-repeat: repeat-x;
+		font-family: Tahoma, sans-serif;
+		position: relative;
+		padding-bottom: 2rem;
+	}
+	a, a:visited { /* порядок правил для ссылок имеет значение */
+		color: #fff;
+		text-decoration: none;
+	}
+	a:hover {
+		color: #fff;
+		text-decoration: none;
+	}
+	a:focus, a:active {
+		color: #fff;
+		text-decoration: none;
+	}
+	img{
+		max-width: 100%;
+	}
+	.centerfix{
+		max-width: 1200px;
+		margin: 0 auto;
+		background-color: #fff;
+	}
+/* --------------- базовые настройки ---------*/
+header{
+	display: flex;
+	justify-content: space-between;
+	padding: 10px 2.5% 0 2.5%;
+	box-sizing: border-box;
+	font-size: 12px;
+	color: #128aa7;
+}
+	.site-logo{
+		position: relative;
+	}
+		.site-logo p{
+			position: absolute;
+			top: 60%;
+			left: 28%;
+		}
+		.contaсts-and-countries{
+			display: flex;
+			flex-direction: column;
+			align-items: flex-end;
+		}
+			.contacts p{
+			margin-top: 5px;
+			margin-bottom: 40px;
+			}
+		.countries{
+			display: flex;
+		}
+			.countries a{
+				color: #128aa7;
+				font-size: 10px;
+				text-decoration: underline;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				margin: 0 10px;
+			}
+.slider{
+	font-size: 0;
+}
+	.slider img{
+		border-top: 1px solid #128aa7;
+		border-bottom: 1px solid #128aa7;
+		width: 100%;
+		font-size: 0;
+	}
+nav{
+	background-image: linear-gradient(#373737, #303030);
+	border-top: 1px solid #cacbcb;
+	border-bottom: 1px solid #000;
+}
+	.main-menu{
+		display: flex;
+		justify-content: space-around;
+		font-size: 14px;
+		color: #fff;
+	}
+		.main-menu > li {
+		    position: relative;
+		    display: inline-block;
+		    margin-right: -4px;
+		}
+		.main-menu a {
+		    display: block;
+		    margin-left: -1px;
+		    padding: 8px 10px;
+		}
+		.main-menu .sub-menu {
+		    position: absolute;
+		    left: 1px;
+		    display: none;
+		    width: 150px;
+		    margin: 0;
+		    padding: 0;
+		    list-style: none;
+				background-image: linear-gradient(#373737, #303030);
+		}
+		.main-menu .sub-menu a {
+		    margin-bottom: -1px;
+		}
+
+		.main-menu > li:hover .sub-menu {
+		    display: block;
+		}
+.content{
+	display: flex;
+	justify-content: space-between;
+}
+	aside{
+		width: 17.25%;
+		border-left: 1px solid #c7cacf;
+		border-right: 1px solid #c7cacf;
+		background-color: #edeef0;
+	}
+footer{
+	position: absolute;
+	color: #fff;
+	text-align: center;
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
